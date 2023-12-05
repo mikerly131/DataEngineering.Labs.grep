@@ -112,8 +112,10 @@ This regex expression will ultimately be part of an automated data pipeline so w
 * So I believe something like this should work...
   * "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([Ss]oftware|[Dd]eveloper|[Ss]oftware[\s][Dd]eveloper)[A-Z a-z]+\s[^\d]+\s[A-Z][a-z A-Z-]+$"
   * Can't believe I figured this out, woo hoo.
+  * More refined, think a few were missing cause Developer is search word and its last word before space
+  * "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([A-Z a-z]*[Ss]oftware[A-Z a-z]+|[A-Z a-z]*[Dd]eveloper[A-Z a-z]+|[A-Z a-z]*[Dd]eveloper)\s[^\d]+\s[A-Z][a-z A-Z-]+$"
 
 
 ```
-ggrep -P "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([Ss]oftware|[Dd]eveloper|[Ss]oftware[\s][Dd]eveloper)[A-Z a-z]+\s[^\d]+\s[A-Z][a-z A-Z-]+$" candidates_1.txt candidates_2.txt
+ggrep -P "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([A-Z a-z]*[Ss]oftware[A-Z a-z]+|[A-Z a-z]*[Dd]eveloper[A-Z a-z]+|[A-Z a-z]*[Dd]eveloper)\s[^\d]+\s[A-Z][a-z A-Z-]+$" candidates_1.txt candidates_2.txt
 ```
