@@ -92,16 +92,28 @@ Each entry in the provided files will contain the following details about a pote
 This regex expression will ultimately be part of an automated data pipeline so we want it to be as hardened as we can reasonably make it. Write a regex expression that meets the following constraints.
 
 * Starting and ending anchors for each line.
+  * For each line? Does that mean the I'm going to do multiple regex?  
+  * Or just start and end the regex?  ^ starts with,  $ end of line/string
 * Each entry will have an id of one or more digits
+  * "^\d+"  
 * Last names must begin with an upper case letter (a-z).
 * Last names may contain any number of characters (a-z). It may also contain spaces, dashes, and hyphens.
+  * "[A-Z][a-z A-Z-]+" 
 * First names must begin with an upper case letter (a-z).
 * First names may contain any number of characters (a-z). It may also contain spaces, dashes, and hyphens.
+  * "[A-Z][a-z A-Z-]+" 
 * A candidate's current job title must contain the word "Software" and/or "Developer".
+  * "([Ss]oftware|[Dd]eveloper|[Ss]oftware[\s][Dd]eveloper)"
 * City must not contain any digits.
+  * [^\d]
 * Each field must be separated by a tab character.
+  * \s will cover white space \s?
+
+* So I believe something like this should work...
+  * "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([Ss]oftware|[Dd]eveloper|[Ss]oftware[\s][Dd]eveloper)[A-Z a-z]+\s[^\d]+\s[A-Z][a-z A-Z-]+$"
+  * Can't believe I figured this out, woo hoo.
+
 
 ```
-This is what I have so far:  ID, Last Name
-ggrep -P '^\d+\s+[A-Z][a-z A-Z-]+' candidates_1.txt
+ggrep -P "^\d+\s+[A-Z][a-z A-Z-]+\s[A-Z][a-zA-Z]+\s([Ss]oftware|[Dd]eveloper|[Ss]oftware[\s][Dd]eveloper)[A-Z a-z]+\s[^\d]+\s[A-Z][a-z A-Z-]+$" candidates_1.txt candidates_2.txt
 ```

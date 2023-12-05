@@ -7,7 +7,7 @@
 134,Randie,Khoter,rkhoter3p@stanford.edu,155.33.72.221,440-188-1770
 163,Sullivan,Fishley,sfishley4i@nyu.edu,162.186.60.226,734-605-8322
 166,Dulcia,Beed,dbeed4l@columbia.edu,253.114.195.18,796-497-4163
-231,Arlene,Barwise,abarwise6e@berkeley.edu,140.182.61.30,965-207-1243
+231,Arlene,Barwize,abarwise6e@berkeley.edu,140.182.61.30,965-207-1243
 237,Shena,Stormouth,sstormouth6k@harvard.edu,155.9.64.156,713-754-9799
 273,Lebbie,Aspinell,laspinell7k@nyu.edu,107.32.253.187,903-513-8704
 291,Ezmeralda,Ingarfill,eingarfill82@uiuc.edu,134.80.96.11,656-353-6509
