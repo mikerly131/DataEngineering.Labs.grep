@@ -51,7 +51,6 @@ Inside the data directory, there is a file called "users.csv". This file contain
 
 Identify users that have email addresses with six or less characters before the @ symbol where none of these characters are numbers.
 ```
-I can't find if -E is required for regex, just that its a flag to treat it as regex and it won't work unless flag is set
 ggrep -E "\b[a-zA-z]{1,6}@" users.csv
 ```
 
@@ -68,10 +67,10 @@ Ryan Howard did a poor job and used the CC field rather than the BCC field for t
 
 Use grep to identify the user with a single regex pattern.
 ```
-This should work but it won't and I can't figure out why or figure out an alternate yet
-ggrep -E '\b184[,\d.]*\b38' users.csv
+If using perl regex with gnu grep....
+ggrep -P "184[,\d\.]{1,},38" users.csv
 
-Ridiculous, pattern out an IP address. This works...
+If not, this ridiculous expression accounting for ip address format aslso works...
 ggrep -E '184\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3},38' users.csv
 ```
 
@@ -104,4 +103,5 @@ This regex expression will ultimately be part of an automated data pipeline so w
 
 ```
 PROVIDE A SOLUTION HERE
+One day perhaps, this is over my head especially since regex that seems like its valid and works in other scenarios doesn't with ggrep.
 ```
