@@ -102,6 +102,6 @@ This regex expression will ultimately be part of an automated data pipeline so w
 * Each field must be separated by a tab character.
 
 ```
-PROVIDE A SOLUTION HERE
-One day perhaps, this is over my head especially since regex that seems like its valid and works in other scenarios doesn't with ggrep.
+This is what I have so far:  ID, Last Name
+ggrep -P '^\d+\s+[A-Z][a-z A-Z-]+' candidates_1.txt
 ```

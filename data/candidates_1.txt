@@ -50,7 +50,7 @@
 50	Lexie	Ornells	Environmental Specialist	Phoenix	Arizona
 51	Leonerd	Treherne	Product Engineer	Atlanta	Georgia
 52	Brod	Humphrey	Desktop Support Technician	Fresno	California
-53	Bink	Spawforth	Quality Control Specialist	Erie	Pennsylvania
+53	Bink Boy	Spawforth	Quality Control Specialist	Erie	Pennsylvania
 54	Monika	McGettigan	Human Resources Manager	Tuscaloosa	Alabama
 55	Urson	McLarnon	VP Quality Control	Bronx	New York
 56	Millisent	Weaving	Account Coordinator	Las Vegas	Nevada
